@@ -1,30 +1,63 @@
 <script setup lang="ts">
-  import { reactive } from "vue";
+  /** Tag Search View */
+
+  import "material-symbols";
+
+  import { ref } from "vue";
+
+  import TagField from "./TagField.vue";
+  import Popup from "./Popup.vue";
+  import Item from "./type/Item";
 
   interface Props {
-    primary?: boolean;
+    /** options of list */
+    options: Item[];
+    /** value */
+    modelValue: Item[];
   }
 
-  const props = withDefaults(defineProps<Props>(), {
-    primary: false,
+  interface Emits {
+    (e: "update:modelValue", value: Item[]): void;
+  }
+
+  withDefaults(defineProps<Props>(), {
+    modelValue: () => [],
   });
 
-  const { primary } = reactive(props);
+  const emits = defineEmits<Emits>();
+
+  const isPopupOpen = ref(false);
+
+  const onFocus = () => {
+    isPopupOpen.value = true;
+  };
+
+  const onPopupClose = () => {
+    isPopupOpen.value = false;
+  };
+
+  const onSearch = (value: Item[]) => {
+    emits("update:modelValue", value);
+    isPopupOpen.value = false;
+  };
 </script>
 
 <template>
-  <button class="btn" :class="{ primary }">
-    <slot />
-  </button>
+  <div>
+    <TagField
+      placeholder="検索"
+      :tags="modelValue"
+      should-input
+      @focus="onFocus"
+    />
+    <Popup
+      v-show="isPopupOpen"
+      :is-open="isPopupOpen"
+      :options="options"
+      :value="modelValue"
+      @search="onSearch"
+      @close="onPopupClose"
+    />
+  </div>
 </template>
-
-<style scoped>
-button {
-  padding: .6rem 1.25rem;
-  background-color: #747bff;
-  border: 0;
-}
-button:hover {
-  background-color: #535bf2;
-}
-</style>
+./type/Item

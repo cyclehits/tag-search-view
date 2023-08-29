@@ -1,7 +1,7 @@
 <script setup>
-import { ref } from "vue";
+  import { ref } from "vue";
 
-import { TagSearchView } from "@/components";
+  import { TagSearchView } from "@/components";
 
   // test data
   import fruits from "./data/fruits.json";
@@ -17,10 +17,8 @@ import { TagSearchView } from "@/components";
 </script>
 
 <template>
-  <h1>Tag Search View</h1>
-  <TagSearchView>
-    <span>hoge</span>
-  </TagSearchView>
+  <h2>Tag Search View</h2>
+  <TagSearchView v-model="value" :options="options" />
   <div class="message">
     <span>値</span>
     <div v-for="v in value" :key="v.value">
