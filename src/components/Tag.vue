@@ -40,6 +40,7 @@
     padding: 0.15rem 0.5rem;
     border-radius: 0.25rem;
     margin-right: 0.25rem;
+    word-break: keep-all;
     .tag-name {
       padding-bottom: 0.25rem;
     }

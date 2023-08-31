@@ -45,7 +45,7 @@
     <span
       class="material-symbols-outlined check-circle"
       :class="state.style"
-      @click="onClick(!props.checked)"
+      @click.stop="onClick(!props.checked)"
     >
       {{ state.icon }}
     </span>

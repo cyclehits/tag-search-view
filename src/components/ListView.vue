@@ -33,7 +33,18 @@
 
   const onChange = (value: boolean, index: number) => {
     checkedItems.value[index].checked = value;
+    const items = insertOrDeleteItems(value, index);
+    emits("update:modelValue", items);
+  };
 
+  const onClick = (checked: boolean, index: number) => {
+    const value = !checked;
+    checkedItems.value[index].checked = value;
+    const items = insertOrDeleteItems(value, index);
+    emits("update:modelValue", items);
+  };
+
+  const insertOrDeleteItems = (value: boolean, index: number) => {
     let items = [...modelValue.value];
     if (value) {
       const { label, value } = checkedItems.value[index];
@@ -44,7 +55,7 @@
       );
     }
 
-    emits("update:modelValue", items);
+    return items;
   };
 
   const updateItems = (newModelValue: Item[], newItems: Item[]) => {
@@ -71,7 +82,12 @@
 
 <template>
   <ul class="list-view">
-    <li v-for="(item, index) in checkedItems" :key="index" class="list-item">
+    <li
+      v-for="(item, index) in checkedItems"
+      :key="index"
+      class="list-item"
+      @click="onClick(item.checked, index)"
+    >
       <CircleCheckbox
         :label="item.label"
         :checked="item.checked"
