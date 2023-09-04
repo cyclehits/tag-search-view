@@ -55,11 +55,11 @@
 
 <style scoped lang="scss">
   .circle-checkbox {
+    cursor: pointer;
     display: flex;
     align-items: center;
     .check-circle {
       margin-right: 0.5rem;
-      cursor: pointer;
       &.check-circle__empty {
         &.material-symbols-outlined {
           font-variation-settings:

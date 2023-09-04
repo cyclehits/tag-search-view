@@ -104,6 +104,8 @@
 
   .text-field-button {
     padding: 0.5rem;
+    color: #213547; // cancel dark mode
+    background-color: #f9f9f9; // cancel dark mode
     border: 1px solid #ced4da;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;

@@ -81,6 +81,7 @@
       margin-left: 0.5rem;
       border: none;
       outline: none;
+      background-color: #fff; // cancel dark mode
     }
   }
 </style>

@@ -28,7 +28,7 @@
 
   const isPopupOpen = ref(false);
 
-  const onFocus = () => {
+  const onTagFieldClick = () => {
     isPopupOpen.value = true;
   };
 
@@ -48,7 +48,7 @@
       placeholder="検索"
       :tags="modelValue"
       should-input
-      @focus="onFocus"
+      @click="onTagFieldClick"
     />
     <Popup
       v-show="isPopupOpen"

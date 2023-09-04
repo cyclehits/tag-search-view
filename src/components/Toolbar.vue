@@ -89,6 +89,8 @@
       box-sizing: border-box;
       width: 2rem;
       padding-right: 0.75rem;
+      cursor: pointer;
+      color: #213547; // cancel dark mode
     }
     .button__search {
       box-sizing: border-box;
