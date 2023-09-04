@@ -55,7 +55,6 @@
 
 <style scoped lang="scss">
   .circle-checkbox {
-    cursor: pointer;
     display: flex;
     align-items: center;
     .check-circle {
