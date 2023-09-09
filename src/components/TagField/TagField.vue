@@ -2,7 +2,7 @@
   /** Tag Field */
 
   import Tag from "./Tag.vue";
-  import Item from "./type/Item";
+  import Item from "@/components/type/Item";
 
   interface Props {
     /** inside popup (true / false) */
@@ -39,7 +39,7 @@
     <Tag
       v-for="(tag, index) in tags"
       :key="index"
-      :name="tag.label"
+      :label="tag.label"
       :deletable="insidePopup"
       @delete="onTagDelete(tag)"
     />
@@ -85,4 +85,3 @@
     }
   }
 </style>
-./type/Item

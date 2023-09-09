@@ -1,8 +1,8 @@
 <script setup lang="ts">
   /** Toolbar */
 
-  import TagField from "./TagField.vue";
-  import Item from "./type/Item";
+  import TagField from "@/components/TagField";
+  import Item from "@/components/type/Item";
 
   interface Props {
     /** placeholder */
@@ -89,7 +89,6 @@
       box-sizing: border-box;
       width: 2rem;
       padding-right: 0.75rem;
-      cursor: pointer;
       color: #213547; // cancel dark mode
     }
     .button__search {

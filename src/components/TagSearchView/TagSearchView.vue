@@ -5,9 +5,9 @@
 
   import { ref } from "vue";
 
-  import TagField from "./TagField.vue";
-  import Popup from "./Popup.vue";
-  import Item from "./type/Item";
+  import TagField from "@/components/TagField";
+  import Popup from "@/components/Popup";
+  import Item from "@/components/type/Item";
 
   interface Props {
     /** options of list */

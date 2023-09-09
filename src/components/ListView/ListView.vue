@@ -3,8 +3,8 @@
 
   import { ref, toRefs, watch } from "vue";
 
-  import CircleCheckbox from "./CircleCheckbox.vue";
-  import Item from "./type/Item";
+  import CircleCheckbox from "@/components/CircleCheckbox";
+  import Item from "@/components/type/Item";
 
   interface CheckedItem extends Item {
     /** checked (true / false) */
