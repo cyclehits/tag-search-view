@@ -54,7 +54,7 @@ describe("CircleCheckbox", () => {
         await wrapper.find("span").trigger("click");
 
         // check if not checked, clear if checked
-        expect(wrapper.emitted()["change"][0]).toStrictEqual([!checked]);
+        expect(wrapper.emitted().change[0]).toStrictEqual([!checked]);
     });
 
 });

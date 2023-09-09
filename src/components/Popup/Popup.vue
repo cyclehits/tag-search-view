@@ -3,11 +3,11 @@
 
   import { ref, watch, watchEffect, nextTick } from "vue";
 
-  import Toolbar from "./Toolbar.vue";
-  import ListView from "./ListView.vue";
-  import TextField from "./TextField.vue";
+  import Toolbar from "@/components/Toolbar";
+  import ListView from "@/components/ListView";
+  import TextField from "@/components/TextField";
 
-  import Item from "./type/Item";
+  import Item from "@/components/type/Item";
 
   interface Props {
     /** is popup open (true / false) */

@@ -24,7 +24,8 @@
     "build": "vue-tsc && vite build",
     "preview": "vite preview",
     "lint": "eslint src/*.{ts,vue} && eslint src/**/*.{ts,vue}",
-    "test": "vitest run"
+    "test": "vitest run",
+    "test:watch": "vitest"
   },
   "dependencies": {
     "material-symbols": "^0.11.0",

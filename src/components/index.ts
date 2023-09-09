@@ -1,1 +1,1 @@
-export { default as TagSearchView } from "./TagSearchView.vue";
+export { default as TagSearchView } from "./TagSearchView";

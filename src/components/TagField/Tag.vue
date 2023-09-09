@@ -2,8 +2,8 @@
   /** Tag */
 
   interface Props {
-    /** name of tag */
-    name: string;
+    /** label of tag */
+    label: string;
     /** be able to delete (true / false) */
     deletable?: boolean;
   }
@@ -21,7 +21,7 @@
 
 <template>
   <span class="tag">
-    <span class="tag-name">{{ name }}</span>
+    <span class="tag-label">{{ label }}</span>
     <span
       v-if="deletable"
       class="material-symbols-outlined icon__close"
@@ -41,7 +41,7 @@
     border-radius: 0.25rem;
     margin-right: 0.25rem;
     word-break: keep-all;
-    .tag-name {
+    .tag-label {
       padding-bottom: 0.25rem;
     }
     .icon__close {
