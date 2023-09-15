@@ -10,6 +10,8 @@
   import Item from "@/components/type/Item";
 
   interface Props {
+    /** placeholder */
+    placeholder?: string;
     /** options of list */
     options: Item[];
     /** value */
@@ -21,6 +23,7 @@
   }
 
   withDefaults(defineProps<Props>(), {
+    placeholder: "",
     modelValue: () => [],
   });
 
@@ -45,13 +48,14 @@
 <template>
   <div>
     <TagField
-      placeholder="検索"
+      :placeholder="placeholder"
       :tags="modelValue"
       should-input
       @click="onTagFieldClick"
     />
     <Popup
       v-show="isPopupOpen"
+      :placeholder="placeholder"
       :is-open="isPopupOpen"
       :options="options"
       :value="modelValue"

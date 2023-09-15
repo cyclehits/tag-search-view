@@ -18,9 +18,10 @@
 
 <template>
   <h2>Tag Search View</h2>
-  <TagSearchView v-model="value" :options="options" />
+  <TagSearchView v-model="value" placeholder="Seacrh..." :options="options" />
   <div class="message">
-    <span>値</span>
+    <span>Selected Values</span>
+    <hr />
     <div v-for="v in value" :key="v.value">
       <span>label&nbsp;:&nbsp;{{ v.label }}</span>
       &nbsp;

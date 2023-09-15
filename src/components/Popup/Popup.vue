@@ -10,6 +10,8 @@
   import Item from "@/components/type/Item";
 
   interface Props {
+    /** placeholder */
+    placeholder?: string;
     /** is popup open (true / false) */
     isOpen?: boolean;
     /** options of list */
@@ -23,7 +25,10 @@
     (e: "search", value: Item[]): void;
   }
 
-  const props = defineProps<Props>();
+  const props = withDefaults(defineProps<Props>(), {
+    placeholder: "",
+    isOpen: false,
+  });
   const emits = defineEmits<Emits>();
 
   const textfield = ref<typeof TextField>();
@@ -83,7 +88,7 @@
         <TextField
           ref="textfield"
           v-model="searchText"
-          placeholder="検索"
+          :placeholder="placeholder"
           @add="onTextAdd"
         />
         <div class="list-container">

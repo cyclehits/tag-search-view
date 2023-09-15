@@ -14,6 +14,10 @@
         "@typescript-eslint"
     ],
     "rules": {
-        "vue/multi-word-component-names": 1
+        "vue/multi-word-component-names": 1,
+        "semi": [
+            "error",
+            "always"
+        ]
     }
 }
