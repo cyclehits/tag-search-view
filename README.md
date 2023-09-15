@@ -3,6 +3,7 @@
 Vue Component to filter tags for Smartphones.
 
 ## Demo
+https://github.com/cyclehits/tag-search-view/assets/47079859/041b044c-4c15-401e-947f-bf205732b1dd
 
 ## Installation
 
