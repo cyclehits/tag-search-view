@@ -11,7 +11,9 @@ export default defineConfig({
   plugins: [
     vue(),
     dts({
-      insertTypesEntry: true,
+      entryRoot: "src",
+      include: ["src/components/**/*"],
+      outDir: "./dist"
     }),
     typescript2({
       check: false,
