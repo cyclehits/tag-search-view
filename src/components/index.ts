@@ -1,1 +1,1 @@
-export { default as TagSearchView } from "./TagSearchView";
+export { default as TagSearchView } from "@/components/TagSearchView";
