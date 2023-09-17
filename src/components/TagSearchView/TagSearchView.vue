@@ -64,4 +64,3 @@
     />
   </div>
 </template>
-./type/Item
