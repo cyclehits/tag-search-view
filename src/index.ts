@@ -1,0 +1,1 @@
+export { TagSearchView } from "./components";

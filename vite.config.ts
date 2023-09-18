@@ -4,17 +4,12 @@ import vue from "@vitejs/plugin-vue";
 
 import * as path from "path";
 import typescript2 from "rollup-plugin-typescript2";
-import dts from "vite-plugin-dts";
 
-// https://vitejs.dev/config/
+
 export default defineConfig({
+  publicDir: false,
   plugins: [
     vue(),
-    dts({
-      entryRoot: "src",
-      include: ["src/components/**/*"],
-      outDir: "./dist"
-    }),
     typescript2({
       check: false,
       include: ["src/components/**/*.vue"],
@@ -27,14 +22,13 @@ export default defineConfig({
         },
       },
       exclude: ["vite.config.ts"]
-    })
+    }),
   ],
   build: {
     cssCodeSplit: true,
     lib: {
-      // Could also be a dictionary or array of multiple entry points
-      entry: "src/components/main.ts",
-      name: "tagSearchView",
+      entry: "src/index.ts",
+      name: "TagSearchView",
       formats: ["es", "cjs", "umd"],
       fileName: format => `tag-search-view.${format}.js`
     },
