@@ -17,7 +17,7 @@ npm install --save tag-search-view
 Use in Vue Single-File Components.
 
 ```ts
-<script>
+<script setup lang="ts">
    import { ref } from "vue";
 
    import { TagSearchView } from "tag-search-view";
@@ -47,7 +47,7 @@ Use in Vue Single-File Components.
 </script>
 
 <temlpates>
-   <TagSearchView :options="options" v-model="value" />
+   <TagSearchView :options="options" v-model="value" placeholder="Search..." />
 </templates>
 ```
 
@@ -57,6 +57,7 @@ Use in Vue Single-File Components.
 | -------------------- | ------ | ------- | -------------------------- |
 | v-model (_required_) | Item[] | -       | two-way binding value.     |
 | options              | Item[] | -       | choices in this component. |
+| placeholder          | string |         | placeholder of text field. |
 
 ### Interface
 
