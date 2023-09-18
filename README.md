@@ -17,7 +17,7 @@ npm install --save tag-search-view
 Use in Vue Single-File Components.
 
 ```ts
-<script>
+<script setup lang="ts">
    import { ref } from "vue";
 
    import { TagSearchView } from "tag-search-view";
