@@ -79,13 +79,13 @@ Use in Vue Single-File Components.
 
 ## Development
 
-### Launch Lint
+### Lint
 
 ```bash
 npm run lint
 ```
 
-### Launch Unit Test
+### Unit Test
 
 ```bash
 npm run test
