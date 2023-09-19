@@ -4,7 +4,7 @@ Vue Component to filter tags for Smartphones.
 
 ## Demo
 
-![](./demo/demo.gif)
+<img src="./demo/demo.gif" width="400" />
 
 ## Installation
 
