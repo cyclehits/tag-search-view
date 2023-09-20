@@ -1,7 +1,19 @@
 {
   "name": "tag-search-view",
   "private": false,
-  "version": "0.1.2",
+  "version": "0.1.3",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cyclehits/tag-search-view.git",
+    "directory": "dist"
+  },
+  "keywords": [
+    "component",
+    "component library",
+    "ui library",
+    "vue"
+  ],
   "type": "module",
   "files": [
     "dist"
