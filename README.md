@@ -70,10 +70,9 @@ Use in Vue Single-File Components.
 
 ### Dependencies
 
-| Module           | Version |
-| ---------------- | ------- |
-| vue              | 3.3.4   |
-| material-symbols | 0.11.0  |
+| Module | Version |
+| ------ | ------- |
+| vue    | 3.3.4   |
 
 ## Setup
 
