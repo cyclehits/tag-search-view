@@ -1,11 +1,11 @@
 @font-face {
   font-family: "icomoon";
-  src: url("../fonts/icomoon/icomoon.eot?e2kuh1");
+  src: url("../fonts/icomoon/icomoon.eot?u6ow93");
   src:
-    url("../fonts/icomoon/icomoon.eot?e2kuh1#iefix") format("embedded-opentype"),
-    url("../fonts/icomoon/icomoon.ttf?e2kuh1") format("truetype"),
-    url("../fonts/icomoon/icomoon.woff?e2kuh1") format("woff"),
-    url("../fonts/icomoon/icomoon.svg?e2kuh1#icomoon") format("svg");
+    url("../fonts/icomoon/icomoon.eot?u6ow93#iefix") format("embedded-opentype"),
+    url("../fonts/icomoon/icomoon.ttf?u6ow93") format("truetype"),
+    url("../fonts/icomoon/icomoon.woff?u6ow93") format("woff"),
+    url("../fonts/icomoon/icomoon.svg?u6ow93#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -34,18 +34,18 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-check_circle:before {
+.icon-search:before {
   content: "\e900";
 }
-.icon-circle:before {
+.icon-check_circle:before {
   content: "\e901";
 }
-.icon-close:before {
+.icon-circle:before {
   content: "\e902";
 }
-.icon-add:before {
+.icon-close:before {
   content: "\e903";
 }
-.icon-search:before {
+.icon-add:before {
   content: "\e904";
 }
