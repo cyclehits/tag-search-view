@@ -50,7 +50,7 @@
       @input="onInput"
     />
     <button class="text-field-button" @click="emit('add')">
-      <span class="material-symbols-outlined">add</span>
+      <span class="icon-add"></span>
     </button>
   </div>
 </template>

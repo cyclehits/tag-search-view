@@ -22,13 +22,7 @@
 <template>
   <span class="tag">
     <span class="tag-label">{{ label }}</span>
-    <span
-      v-if="deletable"
-      class="material-symbols-outlined icon__close"
-      @click="emits('delete')"
-    >
-      close
-    </span>
+    <span v-if="deletable" class="icon-close" @click="emits('delete')"></span>
   </span>
 </template>
 
@@ -44,7 +38,7 @@
     .tag-label {
       padding-bottom: 0.25rem;
     }
-    .icon__close {
+    .icon-close {
       padding-left: 0.25rem;
       font-size: 18px;
       &:hover {

@@ -1,7 +1,7 @@
 <script setup lang="ts">
   /** Tag Search View */
 
-  import "material-symbols/outlined.scss";
+  import "@/assets/scss/icons.scss";
 
   import { ref } from "vue";
 

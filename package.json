@@ -41,7 +41,6 @@
     "test:watch": "vitest"
   },
   "dependencies": {
-    "material-symbols": "^0.11.0",
     "vue": "^3.3.4"
   },
   "devDependencies": {
