@@ -21,18 +21,8 @@
 
   const emits = defineEmits<Emits>();
 
-  const state = computed(() => {
-    if (props.checked) {
-      return {
-        style: "check-circle__checked",
-        icon: "check_circle",
-      };
-    } else {
-      return {
-        style: "check-circle__empty",
-        icon: "circle",
-      };
-    }
+  const iconName = computed(() => {
+    return props.checked ? "icon-check_circle" : "icon-circle";
   });
 
   const onClick = (shouldCheck: boolean) => {
@@ -43,11 +33,10 @@
 <template>
   <label class="circle-checkbox">
     <span
-      class="material-symbols-outlined check-circle"
-      :class="state.style"
+      class="check-circle"
+      :class="iconName"
       @click.stop="onClick(!props.checked)"
     >
-      {{ state.icon }}
     </span>
     {{ label }}
   </label>
@@ -59,24 +48,8 @@
     align-items: center;
     .check-circle {
       margin-right: 0.5rem;
-      &.check-circle__empty {
-        &.material-symbols-outlined {
-          font-variation-settings:
-            "FILL" 0,
-            "wght" 200,
-            "GRAD" 0,
-            "opsz" 48;
-        }
-      }
-      &.check-circle__checked {
+      &.icon-check_circle {
         color: #0d6efd;
-        &.material-symbols-outlined {
-          font-variation-settings:
-            "FILL" 1,
-            "wght" 200,
-            "GRAD" 0,
-            "opsz" 48;
-        }
       }
     }
   }

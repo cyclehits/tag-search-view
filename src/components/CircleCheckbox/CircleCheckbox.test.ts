@@ -26,7 +26,7 @@ describe("CircleCheckbox", () => {
         expect(wrapper.text()).include(label);
     });
 
-    test.each([false, true])("style & icon by check state", (checked) => {
+    test.each([false, true])("icon name", (checked) => {
         const wrapper = shallowMount(CircleCheckbox, {
             props: {
                 label: "",
@@ -36,11 +36,9 @@ describe("CircleCheckbox", () => {
 
         const span = wrapper.find("span");
 
-        const style = checked ? "check-circle__checked" : "check-circle__empty";
-        const icon = checked ? "check_circle" : "circle";
+        const iconName = checked ? "icon-check_circle" : "icon-circle";
 
-        expect(span.classes()).include(style);
-        expect(span.text()).toBe(icon);
+        expect(span.classes()).include(iconName);
     });
 
     test.each([false, true])("emit change", async (checked) => {

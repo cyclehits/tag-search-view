@@ -106,6 +106,21 @@ Bundle the js and css to the `dist` directory.
 npm run build
 ```
 
+### Icons
+
+- download svg files by [Material Symbols and Icons](https://fonts.google.com/icons)
+- convert to webfont by [IcoMoon](https://icomoon.io/)
+
+#### Settings (Material Symbols)
+
+| Name         | Fill | Weight | Grade | Optical Size |
+| ------------ | ---- | ------ | ----- | ------------ |
+| add          | 0    | 400    | 0     | 24           |
+| check_circle | 1    | 400    | 0     | 24           |
+| circle       | 0    | 200    | 0     | 24           |
+| close        | 0    | 400    | 0     | 24           |
+| search       | 0    | 400    | 0     | 24           |
+
 ## License
 
 [The MIT License](http://opensource.org/licenses/MIT)

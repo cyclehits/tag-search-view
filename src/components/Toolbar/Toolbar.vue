@@ -37,12 +37,7 @@
 <template>
   <nav class="toolbar-container">
     <div class="toolbar">
-      <span
-        class="material-symbols-outlined icon__close"
-        @click="emits('close')"
-      >
-        close
-      </span>
+      <span class="icon-close" @click="emits('close')"></span>
       <TagField
         class="tag-field__in-toolbar"
         inside-popup
@@ -51,7 +46,7 @@
         @delete="onTagDelete"
       />
       <button class="button__search" @click="emits('search')">
-        <span class="material-symbols-outlined">search</span>
+        <span class="icon-search"></span>
       </button>
     </div>
   </nav>
@@ -85,7 +80,7 @@
         width: calc(100% - 4.5rem);
       }
     }
-    .icon__close {
+    .icon-close {
       box-sizing: border-box;
       width: 2rem;
       padding-right: 0.75rem;
