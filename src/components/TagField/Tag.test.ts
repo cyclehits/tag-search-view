@@ -3,7 +3,7 @@ import Tag from "./Tag.vue";
 
 describe("Tag", () => {
 
-    const CLOSE_ICON_SELECTOR = ".icon__close";
+    const CLOSE_ICON_SELECTOR = ".icon-close";
 
     test("support default props", () => {
         const wrapper = shallowMount(Tag, {
