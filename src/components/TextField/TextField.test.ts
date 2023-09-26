@@ -43,19 +43,17 @@ describe("TextField", () => {
         expect(wrapper.emitted().add[0]).toStrictEqual([]);
     });
 
-    test("modelValue to be updated", async () => {
-        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-        // @ts-ignore
+    test("update modelValue when text has entered", async () => {
         const wrapper = shallowMount(TextField, {
             props: {
                 modelValue: "",
-                "onUpdate:modelValue": (e) => wrapper.setProps({ modelValue: e }),
             }
         });
 
-        await wrapper.find("input").setValue("test");
+        const value = "test";
+        await wrapper.find("input").setValue(value);
 
-        expect(wrapper.props().modelValue).toBe("test");
+        expect(wrapper.emitted()["update:modelValue"][0]).toStrictEqual([value]);
     });
 
 });

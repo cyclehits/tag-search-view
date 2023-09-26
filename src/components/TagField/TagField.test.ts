@@ -47,7 +47,6 @@ describe("TagField", () => {
         expect(wrapper.find("input").exists()).toBe(!insidePopup);
     });
 
-
     test("emit delete", () => {
         const tags = [
             { label: "1", value: "1" },
