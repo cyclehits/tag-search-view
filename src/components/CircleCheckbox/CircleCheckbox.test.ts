@@ -6,7 +6,7 @@ describe("CircleCheckbox", () => {
     test("support default props", () => {
         const wrapper = shallowMount(CircleCheckbox, {
             props: {
-                label: "", // label is required props
+                label: "",
             }
         });
 
