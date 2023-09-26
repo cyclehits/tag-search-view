@@ -60,8 +60,7 @@ describe("Toolbar", () => {
             },
         });
 
-        const tagField = wrapper.findComponent(TagField);
-        await tagField.vm.$emit("delete", value);
+        await wrapper.findComponent(TagField).vm.$emit("delete", value);
 
         expect(wrapper.emitted()["update:modelValue"][0]).toStrictEqual([[]]);
     });
