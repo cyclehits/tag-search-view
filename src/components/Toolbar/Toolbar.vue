@@ -89,7 +89,7 @@
     .button__search {
       box-sizing: border-box;
       width: 2.5rem;
-      padding: 0.525rem;
+      padding: 0.575rem;
       border: 1px solid #0d6efd;
       border-top-left-radius: 0;
       border-bottom-left-radius: 0;
