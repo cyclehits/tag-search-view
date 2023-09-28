@@ -52,7 +52,7 @@ describe("Toolbar", () => {
         expect(wrapper.emitted().search[0]).toStrictEqual([]);
     });
 
-    test("update modelValue when tag has deleted", async () => {
+    test("update modelValue when tag has deleted", () => {
         const value = { label: "1", value: "1" };
         const wrapper = shallowMount(Toolbar, {
             props: {
@@ -60,7 +60,7 @@ describe("Toolbar", () => {
             },
         });
 
-        await wrapper.findComponent(TagField).vm.$emit("delete", value);
+        wrapper.findComponent(TagField).vm.$emit("delete", value);
 
         expect(wrapper.emitted()["update:modelValue"][0]).toStrictEqual([[]]);
     });

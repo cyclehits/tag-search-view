@@ -36,7 +36,7 @@ describe("ListView", () => {
         expect(wrapper.emitted()["update:modelValue"][0]).toStrictEqual([expected]);
     });
 
-    test.each([false, true])("update modelValue when CircleCheckbox has changed", async (checked) => {
+    test.each([false, true])("update modelValue when CircleCheckbox has changed", (checked) => {
         const wrapper = shallowMount(ListView, {
             props: {
                 items: [TEST_VALUES[0]],
@@ -44,7 +44,7 @@ describe("ListView", () => {
             },
         });
 
-        await wrapper.findComponent(CircleCheckbox).vm.$emit("change", !checked);
+        wrapper.findComponent(CircleCheckbox).vm.$emit("change", !checked);
 
         const expected = checked ? [] : [TEST_VALUES[0]];
         expect(wrapper.emitted()["update:modelValue"][0]).toStrictEqual([expected]);

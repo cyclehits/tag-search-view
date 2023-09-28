@@ -43,7 +43,7 @@ describe("TagSearchView", () => {
         expect(wrapper.findComponent(Popup).attributes("style")).toStrictEqual("display: none;");
     });
 
-    test("update modelValue when Popup emitted search", async () => {
+    test("update modelValue when Popup emitted search", () => {
         const wrapper = shallowMount(TagSearchView, {
             props: {
                 options: [],
@@ -54,7 +54,7 @@ describe("TagSearchView", () => {
         const value = [
             { label: "1", value: "1" },
         ];
-        await wrapper.findComponent(Popup).vm.$emit("search", value);
+        wrapper.findComponent(Popup).vm.$emit("search", value);
 
         expect(wrapper.emitted()["update:modelValue"][0]).toStrictEqual([value]);
     });

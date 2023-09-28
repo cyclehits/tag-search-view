@@ -43,7 +43,7 @@ describe("TextField", () => {
         expect(wrapper.emitted().add[0]).toStrictEqual([]);
     });
 
-    test("update modelValue when text has entered", async () => {
+    test("update modelValue when text has entered", () => {
         const wrapper = shallowMount(TextField, {
             props: {
                 modelValue: "",
@@ -51,7 +51,7 @@ describe("TextField", () => {
         });
 
         const value = "test";
-        await wrapper.find("input").setValue(value);
+        wrapper.find("input").setValue(value);
 
         expect(wrapper.emitted()["update:modelValue"][0]).toStrictEqual([value]);
     });
